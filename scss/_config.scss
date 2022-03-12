@@ -1,0 +1,18 @@
+
+$dark-red:#8C2713;
+$light-red:#A72E1B;
+$lighter-red:#D73727;
+
+$dark-grey:#373735;
+$light-grey:#585858;
+$lighter-grey:#6F6F6F;
+
+$white:#FFFFFF;
+$black:black;
+
+@mixin  grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax($val,1fr));
+    gap:1.5rem;
+
+}

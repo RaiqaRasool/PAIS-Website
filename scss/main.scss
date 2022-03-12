@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@import "config";
+@import "header";
+@import "footer";
+@import "contact";
+@import "home";
+@import "blog";
+@import "event";
+@import "workshop";
+
+*{
+    font-family: 'Nunito', sans-serif;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top:5rem;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+    &::-webkit-scrollbar-track{
+        background:$black;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $dark-red;
+    }
+}
+body{
+    background: $black;
+    color:$white;
+}
+.light-theme{
+    $white:black;
+    $black:white;
+}
+#theme-changer{
+    display: flex;
+    cursor:pointer;
+    background-color: $dark-red;
+    padding:1rem;
+    border-radius: 50%;
+    color:$white;
+    font-size:3rem;
+    position: fixed;
+    width:5rem;
+    height: 5rem;
+    bottom:2rem;
+    right:1rem;
+    z-index: 10000;
+}
+
+section{
+    padding:5rem 9%;
+}
+
+.btn{
+    margin-top:1rem;
+    display: inline-block;
+    padding:1rem 2.8rem;
+    padding-right: 3rem;
+    background: linear-gradient(130deg,$dark-red 93%,transparent 90%);
+    color:#ffff;
+    font-size: 1.7rem;
+    cursor:pointer;
+
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before{
+        content:'';
+        position: absolute;
+        top:50%;
+        left:0;
+        transform: translateY(-50%);
+        height: 0.1rem;
+        background-color: $white;
+        z-index: -1;
+        width: 100%;
+    }
+    span{
+        font-size: 3rem;
+        color:$dark-red;
+        background-color: $black;
+        padding:0.5rem 1.5rem;
+        border:0.1rem solid $white;
+        border-radius: 0.5rem;
+    }
+}
+
+
+
+//media  queries
+
+@media(max-width:991px){
+    html{
+        font-size:55%;
+    }
+}
+
+
+
