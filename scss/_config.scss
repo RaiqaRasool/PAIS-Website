@@ -16,3 +16,8 @@ $black:black;
     gap:1.5rem;
 
 }
+
+:root{
+    --black:#{$black};
+    --white:#{$white};
+}

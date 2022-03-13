@@ -17,7 +17,6 @@
     outline:none;
     border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all 0.2s linear;
 }
 
@@ -31,27 +30,28 @@ html{
         width:1rem;
     }
     &::-webkit-scrollbar-track{
-        background:$black;
+        background:var(--black);
     }
     &::-webkit-scrollbar-thumb{
         background: $dark-red;
     }
 }
 body{
-    background: $black;
-    color:$white;
+    background: var(--black);
+    color:var(--white);
 }
-.light-theme{
-    $white:black;
-    $black:white;
+body.light-theme{
+   --white:#{$black};
+   --black:#{$white};
 }
+
 #theme-changer{
     display: flex;
     cursor:pointer;
     background-color: $dark-red;
     padding:1rem;
     border-radius: 50%;
-    color:$white;
+    color:var(--white);
     font-size:3rem;
     position: fixed;
     width:5rem;
@@ -82,7 +82,7 @@ section{
 
 .heading{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     position: relative;
 
     &::before{
@@ -92,16 +92,16 @@ section{
         left:0;
         transform: translateY(-50%);
         height: 0.1rem;
-        background-color: $white;
+        background-color: var(--white);
         z-index: -1;
         width: 100%;
     }
     span{
         font-size: 3rem;
         color:$dark-red;
-        background-color: $black;
+        background-color: var(--black);
         padding:0.5rem 1.5rem;
-        border:0.1rem solid $white;
+        border:0.1rem solid var(--white);
         border-radius: 0.5rem;
     }
 }

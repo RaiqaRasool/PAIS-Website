@@ -1,6 +1,9 @@
 .home{
     padding:0;
     margin-top:5.5rem;  
+    .swiper-pagination-bullet{
+        background-color: $white;
+    }
 
     .slide{
         min-height: 85vh;
@@ -22,16 +25,17 @@
         }
         h3{
             font-size:5rem;
-            color:#ffff;
+            color:$white;
             padding:1rem 0;
         }
     }
 }
 
+
 .swiper-pagination-bullet{
     height:2rem;
     width:2rem;
-    background:$white;
+    background:var(--white);
     border-radius:0;
     &.swiper-pagination-bullet-active{
         background:$dark-red;
@@ -80,7 +84,7 @@
 
         .title{
             font-size: 4rem;
-            color:$white;
+            color:var(--white);
             margin-top:0.5rem;
         }
         .box-container{
@@ -94,7 +98,7 @@
 
                 h3{
                     font-size: 2rem;
-                    color:$white;
+                    color:var(--white);
 
                     i{
                         padding-right: 1.5rem;
@@ -112,32 +116,7 @@
         }
     }
 
-@media(max-width:991px){
-    .home .slide{
-        padding:2rem 5%;
 
-        .content{
-            width:50rem;
-            
-            h3{
-                font-size: 4rem;
-            }
-        }
-    }
-}
-
-@media(max-width:768px){
-    .about{
-        gap:3rem;
-
-        .image{
-            margin-top:5rem;
-        }
-        .content .title{
-            font-size: 3rem;
-        }
-    }
-}
 
 
 // events section
@@ -173,7 +152,7 @@
     i{
         font-size: 5rem;
         margin-bottom: 1rem;
-        color: $white;
+        color: var(--white);
     }
     h3{
         font-size: 2rem;
@@ -182,10 +161,271 @@
     p{
         line-height: 2;
         font-size: 1.5rem;
-        color: $white;
+        color: var(--white);
         padding:1rem 0;
     }
 }
 
 }
+}
+
+// team section designing
+
+.team .box-container{
+    @include grid(29rem);
+    gap:0;
+
+.box{
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .content{
+        transform: translateY(0);
+
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .content{
+        position: absolute;
+        bottom:0;left:0;right:0;
+        background: var(--black);
+        padding: 2rem;
+        transform: translateY(6.5rem);
+        span{
+            font-size: 1.5rem;
+            color:$dark-red;
+                }
+        h3{
+            font-size: 2rem;
+            color:var(--white);
+            padding-top: 0.5rem;
+        }
+        .share{
+            padding-top:2rem;
+            margin-top: 1.5rem;
+            border-top:0.1rem solid var(--white);
+
+            a{
+                font-size: 2rem;
+                color:var(--white);
+                margin-right: 1.5rem;
+                &:hover{
+                    color: $dark-red;
+                }
+            }
+        }
+    }
+
+}
+}
+
+// banner section design
+.banner{
+    background:url("/dist/img/home/slider/slider1.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+
+    span{
+        color:$lighter-red;
+        font-size: 2rem;
+    }
+
+        h3{
+            padding-top:1rem;
+            text-transform:uppercase ;
+            font-size: 3.5rem;
+            color:$white;
+        }
+
+        p{
+            margin:1rem auto;
+            max-width: 60rem;
+            color:$white;
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+    
+}
+
+
+// blogs section designing
+
+.blogs{
+    .slide{
+        background: var(--black);
+        margin-bottom: 7rem;
+        &:hover .image img{
+            transform: scale(1.1);
+        }
+
+        .image{
+            height: 25rem;
+            width: 100%;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content{
+            padding: 2rem;
+
+            .link{
+                padding-bottom: 1rem;
+                font-size: 1.5rem;
+
+                a{
+                    color:$lighter-red;
+
+                    &:hover{
+                        color:var(--white);
+                    }
+                }
+                span{
+                    color:var(--white);
+                    padding:0 1rem;
+                }
+
+            }
+            h3{
+                font-size: 2rem;
+                color:var(--white);
+                line-height: 1.5;
+            }
+            p{
+                font-size: 1.5rem;
+                line-height: 2;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+// footer section designing
+
+.footer{
+    .box-container{
+        @include grid(30rem);
+
+        .box{
+            h3{
+                font-size: 2.2rem;
+                padding: 1rem 0;
+            }
+
+            .links{
+                font-size: 1.5rem;
+                padding: 1rem 0;
+                color: var(--white);
+                display: block;
+
+                &:hover{
+                    color:$lighter-red;
+                }
+            }
+
+            p{
+                font-size: 1.5rem;
+                padding:1rem 0;
+
+                i{
+                    padding-right: 0.5rem;
+                    color: $dark-red;
+                }
+               
+            }
+            .share{
+                padding:1rem 0;
+                
+                a{
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    font-size: 1.7rem;
+                    text-align: center;
+                    color:var(--white);
+                    border-radius: 50%;
+                    margin-right: 0.2rem;
+
+                    &:hover{
+                        background-color: $dark-red;
+                    }
+                }
+            }
+
+            form{
+                .email{
+                    margin-top: 1rem;
+                    width:100%;
+                    padding:1.2rem;
+                    font-size: 1.5rem;
+                    background-color: var(--black);
+                    color:var(--white);
+                }
+            }
+        }
+    }
+
+}
+
+.credit{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    color: var(--white);
+
+    span{
+        color:$dark-red;
+    }
+}
+
+// media queries
+
+@media(max-width:991px){
+    .home .slide{
+        padding:2rem 5%;
+
+        .content{
+            width:50rem;
+            
+            h3{
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .about{
+        gap:3rem;
+
+        .image{
+            margin-top:5rem;
+        }
+        .content .title{
+            font-size: 3rem;
+        }
+    }
+    .events{
+        .box-container
+        {
+            .box{
+                &.second{
+                    display: flex;
+                    flex-flow:column;
+                }
+            }
+        }
+    }
 }
