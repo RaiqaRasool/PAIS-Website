@@ -65,7 +65,7 @@
         .navbar{
             position: absolute;
             top:-400%;left:0;right:0;
-            background-color:black;
+            background-color:var(--black);
             display: flex;
             flex-flow: column;
             justify-content: left;
