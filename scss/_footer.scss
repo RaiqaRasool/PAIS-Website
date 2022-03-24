@@ -1,0 +1,79 @@
+// footer section designing
+
+.footer{
+    .box-container{
+        @include grid(30rem);
+
+        .box{
+            h3{
+                font-size: 2.2rem;
+                padding: 1rem 0;
+            }
+
+            .links{
+                font-size: 1.5rem;
+                padding: 1rem 0;
+                color: var(--white);
+                display: block;
+
+                &:hover{
+                    color:$lighter-red;
+                }
+            }
+
+            p{
+                font-size: 1.5rem;
+                padding:1rem 0;
+
+                i{
+                    padding-right: 0.5rem;
+                    color: $dark-red;
+                }
+               
+            }
+            .share{
+                padding:1rem 0;
+                
+                a{
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    font-size: 1.7rem;
+                    text-align: center;
+                    color:var(--white);
+                    border-radius: 50%;
+                    margin-right: 0.2rem;
+
+                    &:hover{
+                        background-color: $dark-red;
+                    }
+                }
+            }
+
+            form{
+                .email{
+                    margin-top: 1rem;
+                    width:100%;
+                    padding:1.2rem;
+                    font-size: 1.5rem;
+                    background-color: var(--black);
+                    color:var(--white);
+                }
+            }
+        }
+    }
+
+}
+
+.credit{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    color: var(--white);
+
+    span{
+        color:$dark-red;
+    }
+}
+
+
