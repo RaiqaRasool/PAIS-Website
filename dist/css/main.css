@@ -272,7 +272,7 @@
 }
 
 .home .slide {
-  min-height: 85vh;
+  min-height: 500px;
   background-size: cover !important;
   background-position: center !important;
   padding: 2rem 9%;
