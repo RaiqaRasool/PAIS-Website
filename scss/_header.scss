@@ -24,7 +24,7 @@
     .navbar{ 
         display: flex;
         align-items: center;
-        a{
+        .dropdown a, a{
         display:inline-block;
         padding:1.5rem 2rem;
         padding-top:1.8rem;
@@ -74,9 +74,15 @@
                 width:100%;
                 font-size:2rem;
             }
+            .dropdown{
+               display: none;
+            }
         }
         .active{
             top:100%;
+            .dropdown{
+                display: block;
+            }
     }
     }
 }

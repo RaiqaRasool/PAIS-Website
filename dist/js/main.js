@@ -34,8 +34,8 @@ const theme_changer_icon=document.getElementById("theme-changer-icon");
   }
 
 
-  // blog posts slider
-  var swiper = new Swiper(".blogs-slider", {
+  //home page blog posts slider
+  var swiper_home = new Swiper(".blogs-slider", {
     spaceBetween: 20,
     effect: "slide",
     grabCursor:true,
@@ -58,5 +58,28 @@ const theme_changer_icon=document.getElementById("theme-changer-icon");
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+  });
+
+  //blog page top trending slider
+  const swiper_blog = new Swiper('.swiper-blog-page', {
+    // Optional parameters
+    spaceBetween:20,
+    loop:true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },      
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true
+    },  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+      draggable: true,
+      snapOnRelease: true
     },
   });
