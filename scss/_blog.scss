@@ -35,22 +35,19 @@
 }
 
 // top blog slider designing starts
-.blog-heading{
-    font-size:4rem;
-    margin:100px 0 50px 0;
-    text-align: center;
-    position: relative;
-}
 .swiper-blog-page{
+    margin-top:100px;
     height: 500px;
     width: 100%;
     .swiper-slide{
         position: relative;
         color:var(--white);
+        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: center;
         .slider-content{
+            color:white;
             padding-left:80px;
             width:70%;
             .blog-title{
@@ -67,22 +64,155 @@
         }
         img{
             opacity: 0.4;
-            background-color: var(--black);
             z-index: -1;
             position:absolute;
             object-fit: cover;
             width: 100%;
             height: 100%;
+            background-color: black;
         }
     }
     .swiper-scrollbar{
-        background-color: var(--white) !important;
+        background-color: white !important;
         opacity: 0.6;
+        margin-bottom: 10px;
     }
 }
 .swiper-scrollbar-drag{
     background-color:$dark-red !important;
 }
+
+// blog recent posts part
+.recent-posts-section{
+    .title{
+        font-size:4rem;    
+    }
+    .main-part{
+        display: flex;
+        flex-wrap: wrap;
+        .blogs-list{
+            margin-right:40px;
+            width: 65%;
+            .title{
+                margin-bottom:50px;
+            }
+            .list-item{
+                display: flex;
+                flex-wrap: wrap;
+                height: 250px;
+                margin-bottom: 40px;
+                border-radius: 0px;
+                border: 0.05px solid var(--black);
+                box-shadow: 0px 0.2px 6px -2.99px var(--white);
+
+                   .item-content{
+                    float: right;
+                    width: 70%;
+                    height: 250px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding: 20px;
+    
+                    .post-title{
+                        font-size: 2.5rem;
+                        font-weight:bolder;
+                    }
+                    .author-and-date{
+                        opacity: 0.6;
+                    }
+                    .excerpt{
+                        margin-top:10px;
+                        font-size: 1.7rem;
+                        width: 85%;
+                    }
+                    .bottom-button{
+                        display: flex;
+                        justify-content: flex-end;
+                        .read-more-button{
+                            padding: 5px 20px;
+                            color:$dark-red;
+                            font-size: 1.5rem;
+                            
+                            border: 2px solid $dark-red;
+        
+                            &:hover{
+                                background-color: $dark-red;
+                                color: white;
+                            }
+                        }
+
+                    }
+                    
+
+                }
+                .item-image{
+                    width: 30%;
+                    img{
+                        height: 250px;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        object-fit: cover;
+                        float: left;
+                    }
+                }
+            }
+        }
+       
+    }
+    .sidebar{
+        width: 30%;
+        height: 300px;
+    
+        .section{
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color:rgba(255,255,255, 0.1);
+            box-shadow: 0px 0.2px 6px -2.99px black;
+    
+            .title{
+                font-size: 2.5rem;
+                font-weight:900;
+            }
+        }
+        .search{
+            input{
+                padding:10px;
+                font-size: 1.7rem;
+                margin-top:10px;
+                border: 1px solid rgba(0,0,0, 0.1);
+        }
+    }
+        .categories{
+        .categories-list{
+            margin-top:20px;
+            list-style-type: none;
+            .category{
+    
+                border-bottom: 1px solid var(--white);
+    
+                a{
+                    text-decoration: none;
+                    color:var(--white);
+                    font-size: 1.7rem;
+                    line-height: 5rem;
+                    
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .category:last-child{
+                border-bottom:none;
+            }
+                
+    
+            }
+    
+        }
+    }
+}
+
+
 
 
 
@@ -105,4 +235,8 @@
             }
         }
     }
+        .blogs-list,.item-content,.item-image,.sidebar{
+            width: 100%;
+            }
 }
+
