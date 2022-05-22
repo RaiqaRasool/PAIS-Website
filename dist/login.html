@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS | Home</title>
+
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- swiper link -->
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- header section starts  -->
+<header class="header">
+    <a href="./index.html" class="logo">
+        <img src="img/logo.png" alt="logo">
+    </a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./blog.html">Blogs</a>
+        <a href="./event.html">Events</a>
+        <a href="./event.html">Workshops</a>
+        <a href="./contact.html">Contact</a>
+        <div class="dropdown">
+            <a href="#">
+                <i class="fa fa-user"></i>&nbsp;&nbsp;
+                Raiqa
+                &nbsp;&nbsp;
+                <i class="fa fa-chevron-down" style="font-size:0.8em;"></i>
+            </a>
+            <ul class="dropdown-list">
+                <li class="dropdown-item">
+                    <a href="#">Dashboard</a>
+                    <a href="#" class="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- header section ends  -->
+
+<!-- login section form starts -->
+<section class="contact-form-section login-form-section">
+    <form action="" method="post" class="contact-form">
+        <h1 class="heading-contact"><span>Login</span></h1>
+        <div><label for="username">Username<span> *</span></label>
+        <input type="text" name="username" id="username" required>
+        </div>
+        <div>
+            <label for="password">Password<span> *</span></label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <input class="btn" type="submit" value="Login">
+        <a href="signup.html" class="sign-up-link">Or Sign Up</a>
+    </form>
+    </section>
+    <!-- login section form ends -->
+
+
+    <div  id="theme-changer">
+        <i id="theme-changer-icon" class="fa-solid fa-moon"></i>
+    </div>   
+    
+    <!-- custom js link -->
+    <script src="js/main.js"></script>
+
+    </body>
+    </html>

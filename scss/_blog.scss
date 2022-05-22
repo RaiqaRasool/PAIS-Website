@@ -99,6 +99,7 @@
             .list-item{
                 display: flex;
                 flex-wrap: wrap;
+                position: relative;
                 height: 250px;
                 margin-bottom: 40px;
                 border-radius: 0px;
@@ -126,8 +127,9 @@
                         width: 85%;
                     }
                     .bottom-button{
-                        display: flex;
-                        justify-content: flex-end;
+                       position: absolute;
+                       right: 15px;
+                       bottom: 15px;
                         .read-more-button{
                             padding: 5px 20px;
                             color:$dark-red;
@@ -161,7 +163,6 @@
     }
     .sidebar{
         width: 30%;
-        height: 300px;
     
         .section{
             padding: 20px;
@@ -219,7 +220,7 @@
 
 // media queries
 
-@media(max-width:768px){
+@media screen and (max-width:1200px){
     .dropdown{
         width: 100%;
 
@@ -235,8 +236,36 @@
             }
         }
     }
-        .blogs-list,.item-content,.item-image,.sidebar{
-            width: 100%;
+    .swiper-blog-page{
+        .swiper-slide
+        {
+            .slider-content{
+                width:95%;
+                padding-left: 50px;
+        
             }
+        }
+    }
+    .recent-posts-section{
+        .main-part{
+
+            .blogs-list{
+                width: 100%;
+                margin-right: 0px;
+                .list-item{
+                    .excerpt{
+                        width: 100%;
+                    }
+                }
+            }
+            .sidebar{
+                width: 100%;
+                #search-box{
+                    width: 100%;
+                }
+            }
+
+        }
+    }
 }
 
